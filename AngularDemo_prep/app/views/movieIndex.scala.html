@@ -1,0 +1,28 @@
+@(movies: List[Movie])
+
+@main("MovieList"){
+	
+	
+	<table class="table">
+	<thead> 
+		<tr>
+			<th> Title </th>
+			<th> Director </th>
+		</tr>
+	</thead>
+	
+	<tbody>
+	@for(movie <- movies){
+		<tr>
+			<td> @movie.title </td>
+			<td> @movie.director</td>	
+			<td> 
+				<a href="@routes.MovieController.update(movie.id)"> Edit </a>
+				<a href="@routes.MovieController.delete(movie.id)"> Delete </a>
+			</td>
+		</tr>
+		}
+	</tbody>
+	</table>
+	
+}

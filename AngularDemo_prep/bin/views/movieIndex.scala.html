@@ -1,0 +1,24 @@
+@(movies: List[Movie])
+
+@main("MovieList"){
+	
+	
+	<table class="table">
+	<thead> 
+		<tr>
+			<th> Title </th>
+			<th> Director </th>
+		</tr>
+	</thead>
+	
+	<tbody>
+	@for(movie <- movies){
+		<tr>
+			<td> @movie.title </td>
+			<td> @movie.director</td>	
+		</tr>
+		}
+	</tbody>
+	</table>
+	
+}
