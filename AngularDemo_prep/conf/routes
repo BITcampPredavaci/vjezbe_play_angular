@@ -14,3 +14,7 @@ POST   /movie/create       controllers.MovieController.create()
 GET    /movie/update/:id   controllers.MovieController.update(id: Integer)
 POST   /movie/edit/        controllers.MovieController.edit()
 GET    /movie/delete/:id   controllers.MovieController.delete(id: Integer)
+
+GET    /api/movie          controllers.MovieAPIController.get()
+POST   /api/movie          controllers.MovieAPIController.create()
+DELETE /api/movie/:id	   controllers.MovieAPIController.delete(id: Integer)

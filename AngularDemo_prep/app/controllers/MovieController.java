@@ -12,7 +12,7 @@ public class MovieController extends Controller {
 	
 	
 	public static Result index(){
-		return ok(movieIndex.render(Movie.all()));
+		return ok(movieIndex.render("Ja sam iz Jave"));
 	}
 	
 	public static Result add(){

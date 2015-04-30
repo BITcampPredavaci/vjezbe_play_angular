@@ -1,7 +1,22 @@
 @(message: String)
 
 @main("Welcome to Play") {
-
-    @play20.welcome(message, style = "Java")
-
+<div ng-controller="movieController">
+   <div class="col-md-8">
+      	<list-movies></list-movies>
+   </div>
+   <div class="col-md-4">
+      <form class="form-group" ng-submit="add()">
+         <label>Title: </label>
+         <input type="text" class="form-control"
+          ng-model="movie.title" />
+          <span style='color:red'> {{movie.error.title}} </span>
+         <label>Director: </label>
+         <input type="text" class="form-control"
+         ng-model="movie.director" />
+          <span style='color:red'> {{movie.error.director}} </span>
+         <input type="submit" value="Save" />
+      </form>
+   </div>
+</div>
 }
